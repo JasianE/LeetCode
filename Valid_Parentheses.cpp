@@ -1,6 +1,7 @@
 #include <stack>
-using namespace std;
 #include <string>
+
+using namespace std;
 
 class Solution {
 public:
