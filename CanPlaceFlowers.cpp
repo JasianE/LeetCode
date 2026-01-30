@@ -8,6 +8,8 @@ public:
         // if the previous one is a 1, no
         // if the next one is a 1, no.
         // else, yes, and set the previous one to 1. 
+
+        //O(n) run time
         bool prev{flowerbed[0] == 0};
         int open_spots{0};
 
