@@ -1,0 +1,38 @@
+class Solution {
+public:
+    vector<int> findErrorNums(vector<int>& nums) {
+        // Use size to determine the size of the array, and where it 
+        // goes up to
+        // iterate through array, and if nums != i, then set it to i
+        vector<int> errors;
+        map<int, int> lookup; 
+
+        for(int i{1}; i < nums.size() + 1; i++){
+            lookup[i] = 0;
+        }
+
+        for(int i{0}; i < nums.size(); i++){
+            lookup[nums[i]]++;
+        }
+
+
+        for(auto entry: lookup){
+            if(entry.second == 2){
+                errors.push_back(entry.first);
+            }
+        }
+
+        for(auto entry: lookup){
+            if(entry.second == 0){
+                errors.push_back(entry.first);
+            }
+        }
+
+        // make a lookup table
+        // add one to each table
+        // if any is return the one that is 2, and one that is 0
+        
+
+        return errors;
+    }
+};
